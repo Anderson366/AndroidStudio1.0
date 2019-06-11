@@ -63,7 +63,7 @@ public class AnuncioAdapter extends RecyclerView.Adapter<AnuncioAdapter.AnuncioV
         public void onClick(View v) {
 
             Intent intent = new Intent();
-
+            intent.putExtra("ANUNCIO TITULO", "");
         }
     }
 }
