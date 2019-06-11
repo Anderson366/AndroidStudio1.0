@@ -1,6 +1,7 @@
 package ifpi.hello4662019.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -44,13 +45,25 @@ public class AnuncioAdapter extends RecyclerView.Adapter<AnuncioAdapter.AnuncioV
     @Override
     public int getItemCount() { return anuncios.size(); }
 
-    class AnuncioViewholder extends RecyclerView.ViewHolder {
+    class AnuncioViewholder extends RecyclerView.ViewHolder implements View.OnClickListener {
         TextView txtTitulo, txtDescrição, txtPreço;
+
         public AnuncioViewholder(@NonNull View itemView) {
             super(itemView);
             txtTitulo = itemView.findViewById(R.id.txt_titulo);
             txtDescrição = itemView.findViewById(R.id.txt_descricao);
             txtPreço = itemView.findViewById(R.id.txt_preco);
+            //configurar o click com uma intent
+
+            itemView.setOnClickListener(this);
+
+        }
+
+        @Override
+        public void onClick(View v) {
+
+            Intent intent = new Intent();
+
         }
     }
 }
