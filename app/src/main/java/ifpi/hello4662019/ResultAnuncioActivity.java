@@ -22,6 +22,4 @@ public class ResultAnuncioActivity extends AppCompatActivity {
     String descricao = it.getStringExtra("Anuncio Descricao");
     double valor = it.getDoubleExtra("Anuncio Valor", 0.0);
 
-
-
 }
