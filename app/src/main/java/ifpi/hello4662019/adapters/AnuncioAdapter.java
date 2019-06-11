@@ -12,6 +12,7 @@ import android.widget.TextView;
 import java.util.List;
 
 import ifpi.hello4662019.R;
+import ifpi.hello4662019.ResultAnuncioActivity;
 import ifpi.hello4662019.modelos.Anuncio;
 
 public class AnuncioAdapter extends RecyclerView.Adapter<AnuncioAdapter.AnuncioViewholder> {
@@ -61,9 +62,13 @@ public class AnuncioAdapter extends RecyclerView.Adapter<AnuncioAdapter.AnuncioV
 
         @Override
         public void onClick(View v) {
+            Intent intent = new Intent(context, ResultAnuncioActivity.class);
 
-            Intent intent = new Intent();
-            intent.putExtra("ANUNCIO TITULO", "");
+            intent.putExtra("Anuncio Titulo", txtTitulo.getText().toString());
+            intent.putExtra("Anuncio Descricao", txtDescrição.getText().toString());
+            intent.putExtra("Anuncio Valor", txtPreço.getText());
+            context.startActivity(intent);
+
         }
     }
 }

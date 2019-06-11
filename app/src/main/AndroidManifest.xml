@@ -11,24 +11,26 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".ResultAnuncioActivity"></activity>
         <activity android:name=".ListaAnuncioActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ListaCelularActivity">
-
-        </activity>
-        <activity android:name=".RadioAndCheckActivity"></activity>
-        <activity android:name=".CicloVida2Activity"
+        <activity android:name=".ListaCelularActivity"></activity>
+        <activity android:name=".RadioAndCheckActivity" />
+        <activity
+            android:name=".CicloVida2Activity"
             android:parentActivityName=".CicloVida1Activity" />
         <activity android:name=".CicloVida1Activity" />
         <activity android:name=".ImplicitIntentSetAlarmActivity" />
         <activity android:name=".Tela2IntentResultActivity" />
         <activity android:name=".Tela1IntentResultActivity" />
         <activity android:name=".ImplicitIntentActivity" />
-        <activity android:name=".NotasSituacaoIntentActivity"
+        <activity
+            android:name=".NotasSituacaoIntentActivity"
             android:parentActivityName=".NotasIntentActivity" />
         <activity android:name=".NotasIntentActivity" />
         <activity android:name=".LinearLayoutActivity" />
