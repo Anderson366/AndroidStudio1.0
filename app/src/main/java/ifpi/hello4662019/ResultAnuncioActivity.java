@@ -16,10 +16,14 @@ public class ResultAnuncioActivity extends AppCompatActivity {
         txtdetalhedescricao.findViewById(R.id.txt_detalhe_descricao);
         txtdetalhevalor.findViewById(R.id.txt_detalhe_valor);
         txtdetalhedata.findViewById(R.id.txt_detalhe_data);
+        Intent i = getIntent();
+        txtdetalhevalor.setText(i.getStringExtra("AnuncioValor"));
+        txtdetalhetitulo.setText(i.getStringExtra("AnuncioTitulo"));
+        txtdetalhedata.setText(i.getStringExtra("AnuncioData"));
+        txtdetalhedescricao.setText(i.getStringExtra("AnuncioDescricao"));
+
     }
-    Intent it = getIntent();
-    String titulo = it.getStringExtra("Anuncio Titulo");
-    String descricao = it.getStringExtra("Anuncio Descricao");
-    double valor = it.getDoubleExtra("Anuncio Valor", 0.0);
+
+
 
 }
