@@ -39,21 +39,21 @@ public class AnuncioAdapter extends RecyclerView.Adapter<AnuncioAdapter.AnuncioV
         Anuncio anuncio = anuncios.get(posição);
 
         anuncioViewholder.txtTitulo.setText(anuncio.getTitulo());
-        anuncioViewholder.txtDescrição.setText(anuncio.getDescrição());
-        anuncioViewholder.txtPreço.setText("R$" + anuncio.getPreço());
+        anuncioViewholder.txtDescricao.setText(anuncio.getDescrição());
+        anuncioViewholder.txtPreco.setText("R$ " + anuncio.getPreço());
     }
 
     @Override
     public int getItemCount() { return anuncios.size(); }
 
     class AnuncioViewholder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        TextView txtTitulo, txtDescrição, txtPreço;
+        TextView txtTitulo, txtDescricao, txtPreco;
 
         public AnuncioViewholder(@NonNull View itemView) {
             super(itemView);
             txtTitulo = itemView.findViewById(R.id.txt_titulo);
-            txtDescrição = itemView.findViewById(R.id.txt_descricao);
-            txtPreço = itemView.findViewById(R.id.txt_preco);
+            txtDescricao = itemView.findViewById(R.id.txt_descricao);
+            txtPreco = itemView.findViewById(R.id.txt_preco);
             //configurar o click com uma intent
 
             itemView.setOnClickListener(this);
