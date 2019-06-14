@@ -17,7 +17,6 @@ public class ListaAnuncioActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_anuncio);
-
         rvAnuncios = findViewById(R.id.rv_anuncios);
     }
 
@@ -28,8 +27,8 @@ public class ListaAnuncioActivity extends AppCompatActivity {
     }
 
     private void obterAnuncios() {
-        List<Anuncio> anuncios = Anuncio.getAnuncios();
-        AnuncioAdapter adapter = new AnuncioAdapter(this, anuncios);
+        List<Anuncio> anuncio = Anuncio.getAnuncios();
+        AnuncioAdapter adapter = new AnuncioAdapter(this, anuncio);
         rvAnuncios.setAdapter(adapter);
         rvAnuncios.setLayoutManager(new LinearLayoutManager(this));
     }
