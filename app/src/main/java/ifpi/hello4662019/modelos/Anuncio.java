@@ -5,17 +5,17 @@ import java.util.List;
 
 public class Anuncio {
     private String titulo;
-    private String descrição;
+    private String descricao;
     private String data;
-    private double preço;
-    private String endereço;
+    private double preco;
+    private String endereco;
 
-    public Anuncio(String titulo, String descrição, String data, double preço, String endereço) {
+    public Anuncio(String titulo, String descricao, String data, double preco, String endereco) {
         this.titulo = titulo;
-        this.descrição = descrição;
+        this.descricao = descricao;
         this.data = data;
-        this.preço = preço;
-        this.endereço = endereço;
+        this.preco = preco;
+        this.endereco = endereco;
     }
 
     public static List<Anuncio> getAnuncios() {
@@ -35,12 +35,12 @@ public class Anuncio {
         this.titulo = titulo;
     }
 
-    public String getDescrição() {
-        return descrição;
+    public String getDescricao() {
+        return descricao;
     }
 
-    public void setDescrição(String descrição) {
-        this.descrição = descrição;
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
     }
 
     public String getData() {
@@ -51,15 +51,15 @@ public class Anuncio {
         this.data = data;
     }
 
-    public double getPreço() { return preço; }
+    public double getPreco() { return preco; }
 
-    public void setPreço(double preço) { this.preço = preço; }
+    public void setPreco(double preco) { this.preco = preco; }
 
-    public String getEndereço() {
-        return endereço;
+    public String getEndereco() {
+        return endereco;
     }
 
-    public void setEndereço(String endereço) {
-        this.endereço = endereço;
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
     }
 }

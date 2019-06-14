@@ -39,8 +39,8 @@ public class AnuncioAdapter extends RecyclerView.Adapter<AnuncioAdapter.AnuncioV
         Anuncio anuncio = anuncios.get(posicao);
 
         anuncioViewholder.txtTitulo.setText(anuncio.getTitulo());
-        anuncioViewholder.txtDescricao.setText(anuncio.getDescrição());
-        anuncioViewholder.txtPreco.setText("R$ " + anuncio.getPreço());
+        anuncioViewholder.txtDescricao.setText(anuncio.getDescricao());
+        anuncioViewholder.txtPreco.setText("R$ " + anuncio.getPreco());
     }
 
     @Override
@@ -67,8 +67,8 @@ public class AnuncioAdapter extends RecyclerView.Adapter<AnuncioAdapter.AnuncioV
             Intent intent = new Intent(context, ResultAnuncioActivity.class);
 
             intent.putExtra("AnuncioTitulo", anuncio.getTitulo());
-            intent.putExtra("AnuncioDescricao", anuncio.getDescrição());
-            intent.putExtra("AnuncioValor", anuncio.getPreço());
+            intent.putExtra("AnuncioDescricao", anuncio.getDescricao());
+            intent.putExtra("AnuncioValor", anuncio.getPreco());
             intent.putExtra("AnuncioData", anuncio.getData());
             context.startActivity(intent);
 
